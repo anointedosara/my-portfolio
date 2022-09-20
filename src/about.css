@@ -151,6 +151,9 @@ blockquote {
         flex-direction: column;
         max-width: 960px;
     }
+    .service {
+        max-width: 960px;
+    }
     .about-info {
         width: 100%;
         padding: 30px 0px 50px;
@@ -183,6 +186,12 @@ blockquote {
     .about-section1 {
         max-width: 540px;
         padding: 6rem 0 0!important;
+    }
+    .skill {
+        width: 80%;
+    }
+    .service {
+        max-width: 540px;
     }
     .info-img {
         width: 100%;
@@ -219,7 +228,7 @@ blockquote {
         padding: 30px 0px 50px;
     }
     .skill {
-        width: 80%;
+        width: 100%;
         height: max-content;
     }
     .service h1 {

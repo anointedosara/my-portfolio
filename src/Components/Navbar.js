@@ -36,8 +36,8 @@ function Navbar() {
             <a href="https://github.com/anointedosara/my-portfolio" className='fork-a' target='_blank' rel="noreferrer"><button className='fork'><i className="fa-solid fa-code-branch"></i> <i className="fa-solid fa-star"></i></button></a>
         </div>
         <div className='drop-img' onClick={handleClick}>
-          <img src="../images/hamburger.png" alt="" />
-          {/* <img onClick={() => handleClick} src="https://www.wisdomosara.com/assets/images/icons8-delete-30.png" alt="" /> */}
+          <img style={{display: display ? 'none' : 'block'}} src="../images/hamburger.png" alt="" />
+          <img style={{display: !display ? 'none' : 'block'}} src="https://www.wisdomosara.com/assets/images/icons8-delete-30.png" alt="" />
         </div>
         
       </div>
