@@ -1,0 +1,165 @@
+.projects {
+    padding: 150px 30px 30px;
+    max-width: 1540px;
+    margin: 0 auto;
+}
+
+.all {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.projects h1 {
+    padding: 10px 0 0;
+    font-size: 36.8px;
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.projects p {
+    font-size: 16px;
+    margin: 0 0 16px;
+    text-align: center;
+}
+
+.projects b {
+    color: #cd5ff8;
+}
+
+.my-projects {
+    margin: 0 0 15px;
+    padding: 0 0 10px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    width: 330px;
+    margin: 50px 25px;
+    box-shadow: 0 4px 5px 3px rgba(119,53,136,.459);
+    border-radius: 0.25rem;
+    transition: all .3s ease-out 0s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+.project img {
+    width: 100%;
+    padding: 20px;
+    transition: all .3s ease-out 0s;
+}
+
+.project h4 {
+    text-align: center;
+    font-size: 20px !important;
+    margin: 0 0 12px;
+}
+
+.project p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 16px;
+    line-height: 25px;
+}
+
+.project div {
+    padding: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.links button {
+    cursor: pointer;
+    color: #fff;
+    background: #623686;
+    border-color: #623686;
+    transition: all .3s ease-out 0s;
+    font-size: 16px;
+    padding: 6px 12px;
+}
+
+.links button:hover {
+    background-color: rgba(109,32,197,.8431372549019608);
+    border-color: rgba(109,32,197,.8431372549019608);
+}
+
+.projects a {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    background-color: #6F2CFF;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .all {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .projects {
+        padding: 6rem 30px 30px;
+    }
+    .all {
+        max-width: 540px;
+    }
+    .projects h1 {
+        font-size: 25px;
+    }
+    .projects p {
+        margin: 0 0 0px;
+    }
+    .my-projects {
+        max-width: 540px;
+    }
+    .project {
+        width: 80%;
+        margin: 30px 0px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .project {
+        width: 100%;
+        margin: 30px 0px;
+    }
+    .projects h1 {
+        font-size: 18px;
+    }
+    .project h4 {
+        font-size: 18px !important;
+    }
+    .project p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .project img {
+        padding: 10px;
+        object-fit: cover;
+    }
+    .project div {
+        padding: 10px;
+    }
+}

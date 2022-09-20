@@ -1,0 +1,256 @@
+.about {
+    max-width: 1540px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.about-section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 9rem 0 0!important;
+}
+
+.about-info {
+    width: calc(100% - 487.5px);
+    padding: 30px 15px 50px;
+    text-align: center;
+}
+
+.about-info h1 {
+    font-size: 33.6px;
+    margin: 0 0 8px;
+    padding: 0 0 20px;
+    text-align: center;
+}
+
+.about-info div {
+    padding: 20px;
+}
+
+.about-info b {
+    color: #cd5ff8;
+}
+
+.about-info p {
+    font-size: 20px;
+    margin: 0 0 16px;
+    text-align: left;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.about-info ul {
+    margin: 0 0 16px;
+    list-style: none;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.about-info ul li {
+    padding: 5px;
+}
+
+blockquote {
+    font-size: 20px;
+    color: rgb(155, 126, 172);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.about span {
+    color: rgb(155, 126, 172);
+    font-size: 16px;
+    font-weight: 500;
+} 
+
+.info-img {
+    width: calc(100% - 682.5px);
+    padding: 120px 15px 50px;
+}
+
+.info-img img {
+    width: 100%;
+}
+
+.service {
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+}
+
+.service h1 {
+    font-size: 36.8px;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.service p {
+    font-size: 16px;
+    margin: 0 0 16px;
+}
+
+.service b {
+    color: #cd5ff8;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.skill {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all .3s ease-out 0s!important;
+    border: 2px solid #cd5ff8;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill img {
+    margin: 8px 0 24px;
+}
+
+.skill h4 {
+    margin: 0 0 8px;
+}
+
+.skill div {
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    margin: 0 0 24px;
+}
+
+.skill p {
+    margin: 0 0 16px;
+    color: #A9A9A9;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .about-section1 {
+        flex-direction: column;
+        max-width: 960px;
+    }
+    .about-info {
+        width: 100%;
+        padding: 30px 0px 50px;
+    }
+    .about-info h1 {
+        font-size: 33.6px;
+        text-align: center;
+    }
+    .about-info div {
+        padding: 20px 0;
+    }
+    .about-info p {
+        text-align: center;
+    }
+    .about-info ul {
+        max-width: 500px;
+        margin: 0 auto 16px auto;
+    }
+    .about span {
+        color: rgb(155, 126, 172);
+        font-size: 16px;
+        font-weight: 500;
+    } 
+    .info-img {
+        width: 100%;
+        padding: 50px 15px 50px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about-section1 {
+        max-width: 540px;
+        padding: 6rem 0 0!important;
+    }
+    .info-img {
+        width: 100%;
+        padding: 0px 0px 50px;
+    }
+}
+@media screen and (max-width: 525px) {
+    .about-info {
+        width: 100%;
+        padding: 30px 0px 50px;
+    }
+    .about-info h1 {
+        font-size: 30px;
+        margin-bottom: 0 !important;
+        padding-bottom: 10px !important;
+    }
+    .about-info div {
+        padding: 20px 0;
+    }
+    .about-info p {
+        text-align: left;
+    }
+    .about-info ul {
+        font-size: 17px;
+    }
+    blockquote {
+        text-align: left;
+    }
+    .about span {
+        font-size: 18px;
+    } 
+    .info-img {
+        width: 100%;
+        padding: 30px 0px 50px;
+    }
+    .skill {
+        width: 80%;
+        height: max-content;
+    }
+    .service h1 {
+        font-size: 30px;
+    }
+}
+@media screen  and (max-width: 375px) {
+    .service h1 {
+        font-size: 25px;
+    }
+    .skill {
+        width: 100%;
+        height: max-content;
+    }
+    .info-img {
+        width: 100%;
+        padding: 0px 0px 50px;
+    }
+    .about-info {
+        width: 100%;
+        padding: 30px 0px 30px;
+    }
+    .about-info ul {
+        max-width: 500px;
+        margin: 0 auto 16px auto;
+        padding: 0;
+    }
+    blockquote {
+        font-size: 16px;
+    }
+    .about span {
+        font-size: 14px;
+    } 
+}
