@@ -126,7 +126,7 @@
 }
 @media screen and (max-width: 768px) {
     .projects {
-        padding: 6rem 30px 30px;
+        padding: 6rem 30px 0px;
     }
     .all {
         max-width: 540px;
@@ -139,6 +139,7 @@
     }
     .my-projects {
         max-width: 540px;
+        padding-bottom: 50px !important;
     }
     .project p {
         margin: 0 0 30px 0;
@@ -171,7 +172,7 @@
     }
     .my-projects {
         margin: 0 0 15px;
-        padding: 30px 0 10px;
+        padding: 0px 0 10px !important;
     }
     .links button {
         font-size: 14px;

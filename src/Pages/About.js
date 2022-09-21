@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import portfolioData from '../data'
 
 function About() {
@@ -49,6 +50,11 @@ function About() {
               </div>)
           }
         </div>
+      </div>
+
+      <div className='navigation'>
+        <button className='next'><Link to='/'><i className="fa-solid fa-arrow-left"></i> <b>Home</b></Link></button>
+        <button className='next'><Link to='/projects'><b>Projects</b> <i className="fa-solid fa-arrow-right"></i></Link></button>
       </div>
     </div>
   )

@@ -45,6 +45,11 @@ function Home() {
         </div>
       </div>
 
+      <div className='navigation'>
+        <div></div>
+        <button className='next'><Link to='/about'><b>About</b> <i className="fa-solid fa-arrow-right"></i></Link></button>
+      </div>
+
       <div className='contact'>
         <h1>FIND ME ON</h1>
         <p>Feel free to <span>connect</span> with me</p>

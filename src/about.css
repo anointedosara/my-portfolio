@@ -70,6 +70,10 @@ blockquote {
     font-size: 16px;
     font-weight: 500;
     line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 } 
 
 .info-img {
@@ -223,6 +227,7 @@ blockquote {
     }
     .about-info ul {
         font-size: 17px;
+        padding: 0 !important;
     }
     .about i {
         margin-right: 0px;
@@ -232,6 +237,8 @@ blockquote {
     }
     .about span {
         font-size: 18px;
+        text-align: right !important;
+        justify-content: flex-end;
     } 
     .info-img {
         width: 100%;

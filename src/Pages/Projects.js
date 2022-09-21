@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import portfolioData from '../data'
 
 function Projects() {
@@ -35,8 +36,12 @@ function Projects() {
               </div>
             </div>)
           }
-          <p className='refer'>Most of my projects are gotten from Front-End Mentor. Click <a href="https://www.frontendmentor.io/" target='_blank' rel="noreferrer"><button className='btn'>Here</button></a> to see Front-End Mentor's Challenges.</p>
         </div>
+      </div>
+
+      <div className='navigation'>
+        <button className='next'><Link to='/about'><i className="fa-solid fa-arrow-left"></i> <strong>About</strong></Link></button>
+        <button className='next'><Link to='/resume'><strong>Resume</strong> <i className="fa-solid fa-arrow-right"></i></Link></button>
       </div>
     </div>
   )
