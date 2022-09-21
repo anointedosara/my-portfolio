@@ -33,9 +33,9 @@ function Home() {
           <div>
             <p>I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️</p>
             <p>I am a year 1 student of the great University of Benin, Faculty of Environmental Science, Department of Geomatics.
-               I'm a self taught Frontend Web Developer with sound knowledge on <b>REACTJS, NEXTJS, 
-                TAILWINDCSS, BOOTSTRAP, HTML5, CSS3, VANILLA JAVASCRIPT, NODEJS, RESTFUL APIS, GITHUB,
-                  GITHUB ACTIONS and more.</b></p>
+               I'm a self taught Frontend Web Developer with sound knowledge on <b>Reactjs, Nextjs, 
+                Tailwind, Bootstrap, HTML5, Css3, Vanilla JavaScript, Nodejs, Restful Apis, Github,
+                  Github Actions and more.</b></p>
             <p>My field of Interest's are building new <b>Web Technologies, Application developement and Products</b> and also in areas related to <b>Clouds.</b></p>
             <p>Whenever possible, I also apply my passion for developing products with <b>Node.js</b> and <b>Modern Javascript Library and Frameworks</b> like <b>React.js and Next.js.</b></p>
             <p>Click <Link to='/projects'><button className='btn'>Here</button></Link> to view my Portfolio.</p>
