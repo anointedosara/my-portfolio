@@ -194,6 +194,7 @@
     .title {
         width: 100%;
         padding: 0px 1px 20px 35px !important;
+        margin-top: -15px;
     }
     .writeup {
         width: 100%;
@@ -206,7 +207,7 @@
     }
     .my-credentials h1 {
         font-size: 23px;
-        margin: 0 0 30px 0 !important;
+        margin: 0 0 40px 0 !important;
     }
     .writeup h1 {
         margin: 0 0 8px 0 !important;
@@ -237,5 +238,8 @@
     }
     .img img {
         width: 20px;
+    }
+    .cred {
+        padding: 40px 0 0 0 !important;
     }
 }
