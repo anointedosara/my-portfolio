@@ -32,7 +32,7 @@ function Projects() {
               </div>
             </div>)
           }
-          <p>Most of my projects are gotten from Front-End Mentor. Click <a href="https://www.frontendmentor.io/" target='_blank' rel="noreferrer"><button className='btn'>Here</button></a> to see Front-End Mentor's Challenges.</p>
+          <p className='refer'>Most of my projects are gotten from Front-End Mentor. Click <a href="https://www.frontendmentor.io/" target='_blank' rel="noreferrer"><button className='btn'>Here</button></a> to see Front-End Mentor's Challenges.</p>
         </div>
       </div>
     </div>

@@ -113,6 +113,10 @@
     cursor: pointer;
 }
 
+.refer {
+    margin-top: 30px !important;
+}
+
 @media screen and (max-width: 1200px) {
     .all {
         max-width: 960px;
@@ -130,7 +134,7 @@
         font-size: 25px;
     }
     .projects p {
-        margin: 0 0 0px;
+        margin: 0 0 30px;
     }
     .my-projects {
         max-width: 540px;
@@ -142,7 +146,7 @@
 }
 @media screen and (max-width: 375px) {
     .project {
-        width: 100%;
+        width: 90%;
         margin: 30px 0px;
     }
     .projects h1 {
@@ -153,7 +157,7 @@
     }
     .project p {
         font-size: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
     .project img {
         padding: 10px;
@@ -161,5 +165,9 @@
     }
     .project div {
         padding: 10px;
+    }
+    .my-projects {
+        margin: 0 0 15px;
+        padding: 30px 0 10px;
     }
 }

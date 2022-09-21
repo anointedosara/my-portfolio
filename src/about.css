@@ -228,7 +228,7 @@ blockquote {
         padding: 30px 0px 50px;
     }
     .skill {
-        width: 100%;
+        width: 90% !important;
         height: max-content;
     }
     .service h1 {
@@ -236,6 +236,9 @@ blockquote {
     }
 }
 @media screen  and (max-width: 375px) {
+    .services {
+        padding: 30px 0 0 0;
+    }
     .service h1 {
         font-size: 25px;
     }
