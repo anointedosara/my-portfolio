@@ -211,10 +211,18 @@ a {
   .dropdown {
     height: 356px !important;
   }
+  section {
+    position: absolute;
+    top: 63.2px;
+    left: 0;
+    width: 100%;
+    background: none;
+    height: 100vh;
+  }
   .hide {
     width: 100%;
     position: absolute;
-    top: 63.2px;
+    top: 0;
     left: 0;
     background-color: rgba(33,32,56,.96);
     box-shadow: 0 10px 10px 0 rgba(9,5,29,.171);

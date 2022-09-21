@@ -39,15 +39,16 @@ function Navbar() {
           <img style={{display: display ? 'none' : 'block'}} src="../images/hamburger.png" alt="" />
           <img style={{display: !display ? 'none' : 'block'}} src="https://www.wisdomosara.com/assets/images/icons8-delete-30.png" alt="" />
         </div>
-        
       </div>
-      <div className={`hide ${display ? "dropdown" : ""}`} id='drop'>
-            <Link to='/' onClick={() => setDisplay(!display)}><button><i className="fa-solid fa-house"></i> Home</button></Link>
-            <Link to='/about' onClick={() => setDisplay(!display)}><button><i className="fa-regular fa-address-card"></i> About</button></Link>
-            <Link to='/projects' onClick={() => setDisplay(!display)}><button><i className="fa-solid fa-list-check"></i> Projects</button></Link>
-            <Link to='/resume' onClick={() => setDisplay(!display)}><button><i className="fa-solid fa-file"></i> Resume</button></Link>
-            <a href="https://github.com/anointedosara/my-portfolio" onClick={() => setDisplay(!display)} className='fork-a' target='_blank' rel="noreferrer"><button className='fork'><i className="fa-solid fa-code-branch"></i> <i className="fa-solid fa-star"></i></button></a>
-        </div>
+      <section onClick={() => setDisplay(!display)} style={{pointerEvents: !display ? 'none' : 'all'}}>
+        <div onClick={(e) => e.stopPropagation()} className={`hide ${display ? "dropdown" : ""}`} id='drop'>
+              <Link to='/' onClick={() => setDisplay(!display)}><button><i className="fa-solid fa-house"></i> Home</button></Link>
+              <Link to='/about' onClick={() => setDisplay(!display)}><button><i className="fa-regular fa-address-card"></i> About</button></Link>
+              <Link to='/projects' onClick={() => setDisplay(!display)}><button><i className="fa-solid fa-list-check"></i> Projects</button></Link>
+              <Link to='/resume' onClick={() => setDisplay(!display)}><button><i className="fa-solid fa-file"></i> Resume</button></Link>
+              <a href="https://github.com/anointedosara/my-portfolio" onClick={() => setDisplay(!display)} className='fork-a' target='_blank' rel="noreferrer"><button className='fork'><i className="fa-solid fa-code-branch"></i> <i className="fa-solid fa-star"></i></button></a>
+          </div>
+      </section>
     </div>
   )
 }

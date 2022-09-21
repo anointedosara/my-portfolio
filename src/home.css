@@ -111,8 +111,11 @@ h2 {
 .introduction-text {
     color: #fff;
     padding: 50px 15px 20px 15px;
-    font-size: 19.2px;
     width: calc(100% - 380px);
+}
+
+.introduction-text p {
+    font-size: 19.2px !important;
     line-height: 30px !important;
 }
 
@@ -250,7 +253,6 @@ h2 {
     .introduction-text {
         color: #fff;
         padding: 50px 15px 20px 15px;
-        font-size: 19.2px;
         width: 100%;
     }
     .introduction-text a {
@@ -301,8 +303,10 @@ h2 {
     }
     .introduction-text {
         padding: 50px 0px 20px 0px;
-        font-size: 17px;
         line-height: 20px;
+    }
+    .introduction-text p {
+        font-size: 17px !important;
     }
     .introduction-text h1 {
         font-size: 30px !important;
@@ -349,6 +353,10 @@ h2 {
     }
     h2 {
         font-size: 30px;
+    }
+    .my-img {
+        width: 100%;
+        padding: 40px 0 10px 0;
     }
     .type {
         padding: 20px 0 0;
