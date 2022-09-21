@@ -1,0 +1,241 @@
+.resume {
+    max-width: 1540px;
+    margin: 0 auto;
+    padding: 110px 15px 30px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1140px;
+    margin: 0 auto 30px auto;
+}
+
+.row button {
+    font-size: 16px;
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #623686;
+    border: 1px solid#623686;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all .3s ease-out 0s;
+}
+
+.row button:hover {
+   background-color: rgba(109,32,197,.8431372549019608);
+   border: 1px solid rgba(109,32,197,.8431372549019608);
+}
+
+.credentials {
+    max-width: 1140px !important;
+    margin: 0 auto;
+    padding: 50px 0 0 0 !important;
+}
+
+.credentials h5 {
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #A9A9A9;
+}
+
+.credentials p {
+    color: #A9A9A9;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.my-credentials {
+    padding: 80px 0 0 0;
+}
+
+.cred {
+    padding: 50px 0 0 0 !important;
+}
+
+.my-credentials h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 24px 0 !important;
+    padding: 0 !important;
+    text-align: center;
+}
+
+.experience {
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    padding: 20px 0 0 0;
+}
+
+.title {
+    width: 40%;
+    padding: 0px 60px 20px 1px;
+}
+
+.title p, .title h1 {
+    text-align: right !important;
+    color: #A9A9A9;
+    font-weight: 500;
+}
+
+.title h1 {
+    margin: 0 0 0px !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.title p {
+    font-size: 16px;
+    margin: 0 0 16px;
+    line-height: 30px;
+}
+
+.writeup p, .writeup h1 {
+    text-align: left !important;
+    font-weight: 500;
+    color: #A9A9A9;
+}
+
+.writeup {
+    width: 60%;
+    text-align: left !important;
+    border-left: 1px solid #A9A9A9;
+    padding: 0px 1px 20px 60px;
+    position: relative;
+}
+
+.writeup h1 {
+    margin: 0 0 8px !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.writeup p {
+    font-size: 16px;
+    margin: 0 0 16px;
+    line-height: 30px;
+}
+
+.line {
+    width: 40px;
+    height: 2px;
+    background: white;
+    margin: 0 0 24px;
+}
+
+.img {
+    position: absolute;
+    left: 0;
+    position: absolute;
+    left: -35px;
+    top: -20px;
+    background-color: #000000;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.exp {
+    border-left: none !important;
+}
+
+@media screen and (max-width: 1200px) {
+    .resume {
+        padding: 110px 30px 0px;
+    }
+    .row {
+        max-width: 960px;
+    }
+    .credentials {
+        max-width: 960px !important;
+        padding: 20px 0 0 0 !important;
+    }
+    .my-credentials {
+        padding: 50px 0 0 0;
+    }
+}
+@media screen and (max-width: 767px) {
+    .row {
+        max-width: 400px;
+    }
+    .credentials {
+        max-width: 460px !important;
+        padding: 0px 0px 0 20px !important;
+    }
+    .my-credentials {
+        padding: 20px 0 0 0;
+    }
+    .credentials h5 {
+        font-size: 25px;
+    }
+    .credentials p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .experience {
+        flex-direction: column;
+        height: max-content;
+        position: relative;
+        padding: 0 !important;
+        margin: 20px 0 0 0 !important;
+        border-left: 1px solid #A9A9A9;
+    }
+    .title {
+        width: 100%;
+        padding: 0px 1px 20px 35px !important;
+    }
+    .writeup {
+        width: 100%;
+        padding: 0px 1px 20px 35px !important;
+        position: static !important;
+        border: none;
+    }
+    .title h1, .title p {
+        text-align: left !important;
+    }
+    .my-credentials h1 {
+        font-size: 23px;
+        margin: 0 0 30px 0 !important;
+    }
+    .writeup h1 {
+        margin: 0 0 8px 0 !important;
+    }
+    .title h1 {
+        margin: 0 !important;
+        font-size: 16px;
+    }
+    .writeup p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .writeup h1 {
+        margin: 8 !important;
+        font-size: 16px;
+    }
+    .title p {
+        font-size: 14px;
+    }
+    .ex {
+        border: none;
+    }
+    .img {
+        left: -25px;
+        top: -20px;
+        width: 50px;
+        height: 50px;
+    }
+    .img img {
+        width: 20px;
+    }
+}

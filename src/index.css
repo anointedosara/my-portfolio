@@ -8,7 +8,7 @@ body {
   color: white;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1.5px;
 }
@@ -16,10 +16,6 @@ h1, h2, h3, h4 {
 p, button, li, blockquote, span {
   font-family: 'Josefin Sans', sans-serif;
   letter-spacing: 0.5px;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

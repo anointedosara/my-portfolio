@@ -3,6 +3,7 @@ import './App.css';
 import './home.css';
 import './about.css';
 import './projects.css';
+import './resume.css';
 import Navbar from './Components/Navbar';
 import About from './Pages/About';
 import Home from './Pages/Home';
