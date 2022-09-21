@@ -22,7 +22,7 @@ function Home() {
             <div className='type'><strong><Type /></strong></div>
           </div>
           <div className='intro-img'>
-            <img src="https://portfolio-mohitsojitra.vercel.app/static/media/home-main.541f8179.svg" alt="" />
+            <img src="../images/home-main.svg" alt="" />
           </div>
         </div>
       </div>

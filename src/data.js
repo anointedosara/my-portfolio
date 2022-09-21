@@ -78,6 +78,42 @@ const portfolioData = [
         writeup: 'I and a friend of mine worked on this Weebly landing page together to test our Github pull request ability, he created the Marketing Page. The first page is all me created using Html, Css and JavaScript.',
         site: 'https://anointedosara.github.io/weebly/',
         project: 'https://github.com/anointedosara/weebly'
+    },
+    {
+        id: "11",
+        image: '../images/carbon_earth.png',
+        skill: 'WEB DEVELOPMENT',
+        speech: 'A very professional front-end web developer with enthusiasm for Full Stack Web Development.'
+    },
+    {
+        id: "12",
+        image: '../images/pixel.png',
+        skill: 'PIXEL PERFECT',
+        speech: 'All my works are pixel perfect and they match design with 100% conversion.'
+    },
+    {
+        id: "13",
+        image: '../images/responsive.png',
+        skill: 'RESPONSIVENESS',
+        speech: 'All my works are responsive on all screensizes from small to extra large screensizes.'
+    },
+    {
+        id: "14",
+        image: '../images/react.png',
+        skill: 'REACTJS',
+        speech: 'I also come with sound knowledge and experience in Reactjs and its important plugins.'
+    },
+    {
+        id: "15",
+        image: '../images/design.png',
+        skill: 'MORE THAN DESIGN',
+        speech: "I also don't just do the design part of front end, I develop using Javascript, Jquery, APIs and more."
+    },
+    {
+        id: "16",
+        image: '../images/learn.png',
+        skill: 'LEARNING CULTURE',
+        speech: "I never settle for less. I'm always looking to learn new technologies and quickly too."
     }
 ]
 
