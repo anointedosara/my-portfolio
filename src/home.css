@@ -112,7 +112,8 @@ h2 {
     color: #fff;
     padding: 50px 15px 20px 15px;
     font-size: 19.2px;
-    width: calc(100% - 380px)
+    width: calc(100% - 380px);
+    line-height: 30px !important;
 }
 
 .introduction-text a {
@@ -137,7 +138,7 @@ h2 {
 }
 
 .introduction-text b {
-    color: #cd5ff8;
+    color: white;
 }
 
 .my-img {
@@ -256,27 +257,19 @@ h2 {
         margin: 0;
         padding: 0;
     }
-    
     .introduction-text h1 {
         font-size: 41.6px !important;
         margin: 0 0 8px 0 !important;
         padding: 0 !important;
         text-align: center;
     }
-    
     .introduction-text span {
         color: #cd5ff8;
     }
-    
     .introduction-text div {
         padding: 30px 0 0 0;
         margin: 0 0 16px 0;
     }
-    
-    .introduction-text b {
-        color: #cd5ff8;
-    }
-    
     .my-img {
         width: 60%;
         padding: 50px 15px 20px 15px;

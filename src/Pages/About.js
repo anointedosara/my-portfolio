@@ -17,14 +17,13 @@ function About() {
     <div className='about'>
       <div className='about-section1'>
         <div className='about-info'>
-          <h1>Know Who <b>I'M</b></h1>
+          <h1>Know Who <b style={{color: '#cd5ff8'}}>I'M</b></h1>
           <div>
-            <p>Hi Everyone, I am <b>Anointed Osara</b> from <b>Edo State, Nigeria.</b><br />
-            I am a Full Stack Javascript Developer.<br /><br />
+            <p>Hi Everyone, I am <b style={{color: '#cd5ff8'}}>Anointed Osara</b> from <b>Edo State, Nigeria.</b><br />
+            I am a Front-End Web Developer.<br /><br />
             Apart from coding, some other activities that I love to do!</p>
             <ul>
               <li><i className="fa-regular fa-hand-point-right"></i> Playing Games</li>
-              <li><i className="fa-regular fa-hand-point-right"></i> Writting Tech Blogs</li>
               <li><i className="fa-regular fa-hand-point-right"></i> Watching Movies and Web Series</li>
             </ul>
             <blockquote>"The world rewards you for value provided, not time spent."</blockquote>
@@ -43,7 +42,7 @@ function About() {
           {
             data?.map(item =>
               <div className='skill'>
-                <img src={item.image} alt="" />
+                <img src={item?.image} alt="" />
                 <h4>{item?.skill}</h4>
                 <div></div>
                 <p>{item?.speech}</p>

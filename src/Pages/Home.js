@@ -33,11 +33,10 @@ function Home() {
           <div>
             <p>I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️</p>
             <p>I am a year 1 student of the great University of Benin, Faculty of Environmental Science, Department of Geomatics.
-               I'm a self taught Frontend Web Developer with sound knowledge on <b>Reactjs, Nextjs, 
-                Tailwind, Bootstrap, HTML5, Css3, Vanilla JavaScript, Nodejs, Restful Apis, Github,
-                  Github Actions and more.</b></p>
+               I'm a self taught Frontend Web Developer with sound knowledge on <b>Reactjs, 
+                Tailwind, HTML5, Css3, Restful Apis, Github,  Actions and more.</b></p>
             <p>My field of Interest's are building new <b>Web Technologies, Application developement and Products</b> and also in areas related to <b>Clouds.</b></p>
-            <p>Whenever possible, I also apply my passion for developing products with <b>Node.js</b> and <b>Modern Javascript Library and Frameworks</b> like <b>React.js and Next.js.</b></p>
+            <p>Whenever possible, I also apply my passion for developing products with <b>Modern Javascript Library and Frameworks</b> like <b>React.js.</b></p>
             <p>Click <Link to='/projects'><button className='btn'>Here</button></Link> to view my Portfolio.</p>
           </div>
         </div>
@@ -53,8 +52,6 @@ function Home() {
           <div><a href="https://github.com/anointedosara" target='_blank' rel="noreferrer"><i className="fa-brands fa-github"></i></a></div>
           <div><a href="https://www.linkedin.com/in/anointed-osara-34313b23a" target='_blank' rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a></div>
           <div><a href="https://twitter.com/OsaraAnointed?t=VR6QJnhafSghm1946wJKUw&s=09" target='_blank' rel="noreferrer"><i className="fa-brands fa-twitter"></i></a></div>
-          <div><a href="https://www.facebook.com/anointed.osara" target='_blank' rel="noreferrer"><i className="fa-brands fa-facebook"></i></a></div>
-          <div><a href="https://wa.me/qr/KJVGYX2DKEDKM1" target='_blank' rel="noreferrer"><i className="fa-brands fa-whatsapp"></i></a></div>
           <div><a href="mailto:anointedosara@gmail.com?subject=Getting in touch with Wisdom from Website"><i className="fa-regular fa-envelope"></i></a></div>
           <div><a href="tel:08139950502"><i className="fa-solid fa-phone"></i></a></div>
         </div>

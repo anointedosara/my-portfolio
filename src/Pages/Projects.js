@@ -8,6 +8,9 @@ function Projects() {
       window.scroll(0, 0);
     })
   }
+
+  const data = portfolioData.filter(data => data.id < 11)
+
   useEffect(() => {
     window.scroll(0, 0);
     handleLoad()
@@ -19,15 +22,15 @@ function Projects() {
         <p>Here are a few projects I've worked on recently.</p>
         <div className='my-projects'>
           {
-            portfolioData?.map(data => 
-            <div key={data.id} className='project'>
-              <img src={data.img} alt="" />
+            data?.map(item => 
+            <div key={item?.id} className='project'>
+              <img src={item?.img} alt="" />
               <div>
-                <h4>{data.title}</h4>
-                <p>{data.writeup}</p>
+                <h4>{item?.title}</h4>
+                <p>{item?.writeup}</p>
                 <div className='links'>
-                  <a href={data.project} target='_blank' rel="noreferrer"><button><i className="fa-solid fa-arrow-up-right-from-square"></i> View Project</button></a>
-                  <a href={data.site} target='_blank' rel="noreferrer"><button><i className="fa-solid fa-arrow-up-right-from-square"></i> Live</button></a>
+                  <a href={item?.project} target='_blank' rel="noreferrer"><button><i className="fa-solid fa-arrow-up-right-from-square"></i> View Project</button></a>
+                  <a href={item?.site} target='_blank' rel="noreferrer"><button><i className="fa-solid fa-arrow-up-right-from-square"></i> Live</button></a>
                 </div>
               </div>
             </div>)

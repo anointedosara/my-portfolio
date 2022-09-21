@@ -31,7 +31,7 @@
 }
 
 .about-info b {
-    color: #cd5ff8;
+    color: white;
 }
 
 .about-info p {
@@ -52,6 +52,7 @@
 
 .about-info ul li {
     padding: 5px;
+    line-height: 30px;
 }
 
 blockquote {
@@ -61,12 +62,14 @@ blockquote {
     padding: 0;
     text-align: center;
     font-weight: 500;
+    line-height: 30px;
 }
 
 .about span {
     color: rgb(155, 126, 172);
     font-size: 16px;
     font-weight: 500;
+    line-height: 30px;
 } 
 
 .info-img {
@@ -94,6 +97,7 @@ blockquote {
 .service p {
     font-size: 16px;
     margin: 0 0 16px;
+    line-height: 30px;
 }
 
 .service b {
