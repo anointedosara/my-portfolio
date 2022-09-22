@@ -174,7 +174,23 @@ a {
 }
 
 .next a:hover {
-  color:rgb(190, 80, 244) !important;
+  color:#be50f4 !important;
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.preloader h1 {
+  color: #CD5FF8;
+  margin-top: 50px;
+  text-align: center;
+  transition: all .7s ease-out 0s;
 }
 
 @media screen and (max-width: 1200px) {
