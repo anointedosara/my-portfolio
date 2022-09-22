@@ -1,8 +1,14 @@
-import { useEffect } from 'react'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Type from '../Components/Type'
+gsap.registerPlugin(ScrollTrigger)
 
 function Home() {
+  const imgRef = useRef()
+  const textRef = useRef(null)
+
   const handleLoad = () => {
     window.addEventListener('load', () => {
       window.scroll(0, 0);
@@ -12,16 +18,26 @@ function Home() {
     window.scroll(0, 0);
     handleLoad()
   }, [])
+  useEffect(() => {
+    const el = imgRef.current
+    const ele = textRef.current
+    gsap.fromTo(el, {transform: 'translateY(-30px)', opacity: 0}, {transform: 'translateX(0px)', opacity: 1, duration: 2, scrollTrigger: {
+      trigger: el,
+      trigger: ele
+    }})
+    gsap.fromTo(ele, {transform: 'translateY(30px)', opacity: 0}, {transform: 'translateX(0px)', opacity: 1, duration: 2})
+  }, [])
+  
   return (
     <div className='home'>
       <div className='home-section1'>
         <div className='section1-intro'>
-          <div className='intro'>
+          <div className='intro' ref={textRef}>
             <h1>Hi There! <span className='wave'>👋🏻</span></h1>
             <h2>I'M <strong>ANOINTED OSARA</strong></h2>
             <div className='type'><strong><Type /></strong></div>
           </div>
-          <div className='intro-img'>
+          <div className='intro-img' ref={imgRef}>
             <img src="../images/home-main.svg" alt="" />
           </div>
         </div>

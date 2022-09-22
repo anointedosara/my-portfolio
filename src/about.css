@@ -10,7 +10,7 @@
     align-items: center;
     max-width: 1140px;
     margin: 0 auto;
-    padding: 9rem 0 0!important;
+    padding: 5rem 0 0!important;
 }
 
 .about-info {
@@ -196,7 +196,7 @@ blockquote {
 @media screen and (max-width: 768px) {
     .about-section1 {
         max-width: 540px;
-        padding: 6rem 0 0!important;
+        padding: 2rem 0 0!important;
     }
     .skill {
         width: 80%;

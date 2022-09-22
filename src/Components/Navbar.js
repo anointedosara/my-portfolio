@@ -21,6 +21,7 @@ function Navbar() {
       window.addEventListener('scroll', scrollHandler)
   return (
     <div className={scroll ? 'nav sticky' : display ? 'nav sticky' : 'navbar sticky'}>
+      <div className='navb'>
       <div className='inner-nav'>
         <Link to='/' className='a'><p>Anointed Osara</p></Link>
         <Link to='/' className='ao'><p>A <span>O.</span></p></Link>
@@ -39,6 +40,7 @@ function Navbar() {
           <img style={{display: display ? 'none' : 'block'}} src="../images/hamburger.png" alt="" />
           <img style={{display: !display ? 'none' : 'block'}} src="https://www.wisdomosara.com/assets/images/icons8-delete-30.png" alt="" />
         </div>
+      </div>
       </div>
       <section onClick={() => setDisplay(!display)} style={{pointerEvents: !display ? 'none' : 'all'}}>
         <div onClick={(e) => e.stopPropagation()} className={`hide ${display ? "dropdown" : ""}`} id='drop'>
