@@ -1,4 +1,5 @@
-import React from 'react'
+import gsap from 'gsap'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -19,6 +20,23 @@ function Navbar() {
       }
     
       window.addEventListener('scroll', scrollHandler)
+
+      useEffect(() => {
+        gsap.utils.toArray(".resume-scroll-right").forEach((scrollElement, i) => {
+          gsap.fromTo(scrollElement, {
+            x: -30,
+            opacity: 0
+          }, {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            visibility: "visible",
+            scrollTrigger: {
+              trigger: scrollElement
+            }
+          })
+        })
+      }, [])
   return (
     <div className={scroll ? 'nav sticky' : display ? 'nav sticky' : 'navbar sticky'}>
       <div className='navb'>
@@ -37,7 +55,7 @@ function Navbar() {
             <a href="https://github.com/anointedosara/my-portfolio" className='fork-a' target='_blank' rel="noreferrer"><button className='fork'><i className="fa-solid fa-code-branch"></i> <i className="fa-solid fa-star"></i></button></a>
         </div>
         <div className='drop-img' onClick={handleClick}>
-          <img style={{display: display ? 'none' : 'block'}} src="../images/hamburger.png" alt="" />
+          <img className='resume-scroll-right' style={{display: display ? 'none' : 'block'}} src="../images/hamburger.png" alt="" />
           <img style={{display: !display ? 'none' : 'block'}} src="https://www.wisdomosara.com/assets/images/icons8-delete-30.png" alt="" />
         </div>
       </div>
