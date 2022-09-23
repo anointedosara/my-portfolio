@@ -11,6 +11,9 @@ import Projects from './Pages/Projects';
 import Resume from './Pages/Resume';
 import Preloader from './Components/Preloader';
 import { useState } from 'react';
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import gsap from 'gsap';
+gsap.registerPlugin(ScrollTrigger)
 
 function App() {
   document.title = "Anointed's Portfolio"
