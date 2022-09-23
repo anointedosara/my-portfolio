@@ -14,7 +14,7 @@ function Resume() {
   }, [])
   return (
     <div className='resume'>
-      <div className='row'><a href="./images/anointedosara's-resume.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
+      <div className='row'><a href="./images/anointedosara's-CV.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
 
       <div className='credentials'>
         <h5>My Credentials</h5>
@@ -101,7 +101,7 @@ function Resume() {
         </div>
       </div>
 
-      <div className='row'><a href="./images/anointedosara's-resume.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
+      <div className='row'><a href="./images/anointedosara's-CV.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
       <div className='navigation'>
         <button className='next'><Link to='/projects'><i className="fa-solid fa-arrow-left"></i> <strong>About</strong></Link></button>
         <div></div>

@@ -18,7 +18,7 @@ function About() {
     <div className='about'>
       <div className='about-section1'>
         <div className='about-info'>
-          <h1>Know Who <b style={{color: '#cd5ff8'}}>I'M</b></h1>
+          <h1>Know Who <b style={{color: '#cd5ff8'}}>I Am</b></h1>
           <div>
             <p>Hi Everyone, I am <b style={{color: '#cd5ff8'}}>Anointed Osara</b> from <b>Edo State, Nigeria.</b><br />
             I am a Front-End Web Developer.<br /><br />

@@ -6,7 +6,7 @@ import Type from '../Components/Type'
 gsap.registerPlugin(ScrollTrigger)
 
 function Home() {
-  const imgRef = useRef()
+  const imgRef = useRef(null)
   const textRef = useRef(null)
 
   const handleLoad = () => {
@@ -22,8 +22,7 @@ function Home() {
     const el = imgRef.current
     const ele = textRef.current
     gsap.fromTo(el, {transform: 'translateY(-30px)', opacity: 0}, {transform: 'translateX(0px)', opacity: 1, duration: 2, scrollTrigger: {
-      trigger: el,
-      trigger: ele
+      trigger: el, ele
     }})
     gsap.fromTo(ele, {transform: 'translateY(30px)', opacity: 0}, {transform: 'translateX(0px)', opacity: 1, duration: 2})
   }, [])
@@ -32,12 +31,12 @@ function Home() {
     <div className='home'>
       <div className='home-section1'>
         <div className='section1-intro'>
-          <div className='intro' ref={textRef}>
+          <div className='intro'>
             <h1>Hi There! <span className='wave'>👋🏻</span></h1>
             <h2>I'M <strong>ANOINTED OSARA</strong></h2>
             <div className='type'><strong><Type /></strong></div>
           </div>
-          <div className='intro-img' ref={imgRef}>
+          <div className='intro-img'>
             <img src="../images/home-main.svg" alt="" />
           </div>
         </div>
