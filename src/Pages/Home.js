@@ -94,7 +94,7 @@ function Home() {
             <p>I am a year 2 student of the great University of Benin, Faculty of Environmental Science, Department of Geomatics.
                I'm a self taught Frontend Web Developer with sound knowledge on <b>Reactjs, HTML5, CSS3, Vanilla JavaScript, Restful Apis, Github, Nextjs, Typescript and more.</b></p>
             <p>My field of Interest's are building new <b>Web Technologies, Application developement and Products</b> and also in areas related to <b>Clouds.</b></p>
-            <p>Whenever possible, I also apply my passion for developing products with <b>Modern Javascript Library and Frameworks</b> like <b>React.js.</b></p>
+            <p>Whenever possible, I also apply my passion for developing products with <b>Modern Javascript Library and Frameworks</b> like <b>Nextjs.js.</b></p>
             <p>Click <Link to='/projects'><button className='btn'>Here</button></Link> to view my Portfolio.</p>
           </div>
         </div>
