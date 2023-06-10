@@ -154,7 +154,7 @@ function Resume() {
                 <div className='resume-scroll-left'>
                   <h1>FreeCodeCamp.org</h1>
                 <div className="line"></div>
-                <p>Learnt the basics to intermediate Javascript and became very fluent with the language. You can view this Certificate <a href="#hjdgh"  target='_blank' rel="noreferrer"><button className='btn'>Here</button></a>.</p>
+                <p>Learnt the basics to intermediate Javascript and became very fluent with the language. You can view this Certificate <a href="https://www.freecodecamp.org/certification/fcc2c83f31b-22dc-4437-a2f7-3f17ce85444d/responsive-web-design"  target='_blank' rel="noreferrer"><button className='btn'>Here</button></a>.</p>
                 </div>
                 </div>
           </div>
