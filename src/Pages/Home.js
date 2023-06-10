@@ -115,7 +115,7 @@ function Home() {
           <div><a href="https://github.com/anointedosara" target='_blank' rel="noreferrer"><i className="fa-brands fa-github"></i></a></div>
           <div><a href="https://www.linkedin.com/in/anointed-osara-34313b23a" target='_blank' rel="noreferrer"><i className="fa-brands fa-linkedin-in"></i></a></div>
           <div><a href="https://twitter.com/OsaraAnointed?t=VR6QJnhafSghm1946wJKUw&s=09" target='_blank' rel="noreferrer"><i className="fa-brands fa-twitter"></i></a></div>
-          <div><a href="mailto:anointedosara@gmail.com?subject=Getting in touch with Wisdom from Website"><i className="fa-regular fa-envelope"></i></a></div>
+          <div><a href="mailto:anointedosara@gmail.com?subject=Getting in touch with Anointed from Website"><i className="fa-regular fa-envelope"></i></a></div>
           <div><a href="tel:08139950502"><i className="fa-solid fa-phone"></i></a></div>
         </div>
       </div>
