@@ -8,11 +8,13 @@ function Type() {
         strings: [
           'Developer',
           'Frontend Developer',
-          'Software Engineer'
+          'Software Engineer',
+          'The Name is MILES'
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50
+        deleteSpeed: 50,
+        cursor: ''
       }}
     />
   )
