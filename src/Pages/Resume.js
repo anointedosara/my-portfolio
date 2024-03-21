@@ -63,7 +63,7 @@ function Resume() {
   }, [])
   return (
     <div className='resume'>
-      <div className='row resume-scroll' style={{visibility: "hidden"}}><a href="./images/anointedosara's-CV.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
+      <div className='row resume-scroll' style={{visibility: "hidden"}}><a href="./images/anointedosara-cv.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
 
       <div className='credentials resume-scroll' style={{visibility: "hidden"}}>
         <h5>My Credentials</h5>
@@ -94,7 +94,7 @@ function Resume() {
                 <h1>Zuri Intern</h1>
                 <p>April 2022-June 2022</p>
               </div>
-              <div className='writeup exp'>
+              <div className='writeup'>
                 <div className='img'>
                   <img src="../images/briefcase.png" alt="" />
                 </div>
@@ -103,6 +103,24 @@ function Resume() {
                   <div className="line"></div>
                   <p>Two months on a rigorous, fast paced and project based internship to improve on existing skills
                   and learn more. I built several products and was mentored by some really good programmers.</p>
+                </div>
+              </div>
+          </div>
+          <div className='experience ex resume-scroll' style={{visibility: "hidden"}}>
+              <div className='title resume-scroll-right'>
+                <h1>Frontend Developer</h1>
+                <p>July 2023 - January 2024</p>
+              </div>
+              <div className='writeup exp'>
+                <div className='img'>
+                  <img src="../images/briefcase.png" alt="" />
+                </div>
+                <div className='resume-scroll-left'>
+                  <h1>Cloudolle</h1>
+                  <div className="line"></div>
+                  <p>
+                  I was involved in a six months contract to build a project with other Developers and designers.
+                  </p>
                 </div>
               </div>
           </div>
@@ -161,7 +179,7 @@ function Resume() {
         </div>
       </div>
 
-      <div className='row resume-scroll' style={{visibility: "hidden"}}><a href="./images/anointedosara's-CV.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
+      <div className='row resume-scroll' style={{visibility: "hidden"}}><a href="./images/anointedosara-cv.pdf" target='_blank'><button><i class="fa-solid fa-download"></i> Download CV</button></a></div>
       <div className='navigation'>
         <button className='next resume-scroll-left'><Link to='/projects'><i className="fa-solid fa-arrow-left"></i> <strong>About</strong></Link></button>
         <div></div>

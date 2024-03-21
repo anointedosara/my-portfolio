@@ -9,12 +9,11 @@ function Type() {
           'Developer',
           'Frontend Developer',
           'Software Engineer',
-          'The Name is MILES'
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
-        cursor: ''
+        deleteSpeed: 100,
+        cursor: '|'
       }}
     />
   )
