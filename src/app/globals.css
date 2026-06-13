@@ -50,7 +50,7 @@
     background-color: rgb(var(--bg-soft));
   }
   .glass {
-    background-color: rgba(var(--card), 0.7);
+    background-color: rgb(var(--card) / 0.85);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid rgb(var(--border));

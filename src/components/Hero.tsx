@@ -114,7 +114,7 @@ export function Hero() {
             transition={{ delay: 0.5 }}
             className="absolute -left-4 top-10 glass rounded-2xl px-4 py-3 shadow-xl"
           >
-            <p className="text-xs text-soft">Experience</p>
+            <p className="text-xs font-medium text-soft">Experience</p>
             <p className="font-display text-lg font-bold">4+ Years</p>
           </motion.div>
           <motion.div
@@ -123,7 +123,7 @@ export function Hero() {
             transition={{ delay: 0.65 }}
             className="absolute -right-4 bottom-12 glass rounded-2xl px-4 py-3 shadow-xl"
           >
-            <p className="text-xs text-soft">Projects</p>
+            <p className="text-xs font-medium text-soft">Projects</p>
             <p className="font-display text-lg font-bold gradient-text">20+ Shipped</p>
           </motion.div>
         </motion.div>
