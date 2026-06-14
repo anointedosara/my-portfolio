@@ -15,11 +15,11 @@ export const profile = {
     "React & Next.js Engineer",
     "Responsive UI Builder",
   ],
-  location: "Edo State, Nigeria",
+  location: "Nigeria",
   tagline:
     "I build modern, scalable, interactive and highly responsive web applications with React and Next.js.",
   bio: [
-    "I'm a Software Engineer (Frontend Developer) from Edo State, Nigeria, looking to join a fast-growing startup. I bring sound knowledge and experience building modern, scalable, interactive and highly responsive web applications with React and Next.js.",
+    "I'm a Software Engineer (Frontend Developer) based in Nigeria, looking to join a fast-growing startup. I bring sound knowledge and experience building modern, scalable, interactive and highly responsive web applications with React and Next.js.",
     "I turn Figma designs into clean, reusable components backed by consistent design systems, and I care about performance, SEO and accessibility — using techniques like server-side rendering (SSR) and dynamic routing in Next.js.",
     "I'm a graduate of the University of Benin (B.Sc. Geomatics, 2020–2025), and I'm always seeking challenging opportunities where I can grow while helping achieve organizational goals.",
   ],
