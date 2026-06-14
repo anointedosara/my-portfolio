@@ -20,7 +20,6 @@ const techs = [
   "CSS3",
   "Git",
   "REST APIs",
-  "Framer Motion",
   "Firebase",
 ];
 
