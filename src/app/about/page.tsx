@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { SkillCard } from "@/components/SkillCard";
 import { StatCounter } from "@/components/StatCounter";
+import { Parallax } from "@/components/Parallax";
 import { getSkills } from "@/lib/data";
 import { profile } from "@/lib/seedData";
 
@@ -37,12 +38,14 @@ export default async function AboutPage() {
           <Reveal x={-30} y={0}>
             <div className="relative mx-auto max-w-md">
               <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-400/25 to-indigo-500/25 blur-xl" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/about.main.png"
-                alt={profile.name}
-                className="relative w-full rounded-3xl"
-              />
+              <Parallax amount={30}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/about.main.png"
+                  alt={profile.name}
+                  className="relative w-full rounded-3xl"
+                />
+              </Parallax>
             </div>
           </Reveal>
 

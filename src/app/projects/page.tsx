@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
+import { Magnetic } from "@/components/Magnetic";
 import { getProjects } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -34,9 +35,11 @@ export default async function ProjectsPage() {
 
         <div className="mt-16 text-center">
           <p className="text-soft">Want to see more or discuss a collaboration?</p>
-          <Link href="/contact" className="btn-primary mt-4">
-            Let&apos;s talk <ArrowRight className="h-4 w-4" />
-          </Link>
+          <Magnetic strength={0.5} className="mt-4">
+            <Link href="/contact" className="btn-primary">
+              Let&apos;s talk <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Magnetic>
         </div>
       </div>
     </div>

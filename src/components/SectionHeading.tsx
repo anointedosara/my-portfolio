@@ -24,12 +24,13 @@ export function SectionHeading({ eyebrow, title, subtitle, center = true }: Prop
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
       gsap.from(items, {
-        y: 42,
+        clipPath: "inset(0% 0% 100% 0%)",
+        yPercent: 40,
         opacity: 0,
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.12,
-        scrollTrigger: { trigger: ref.current, start: "top 85%", once: true },
+        duration: 1,
+        ease: "power4.out",
+        stagger: 0.13,
+        scrollTrigger: { trigger: ref.current, start: "top 88%", once: true },
       });
     },
     { scope: ref }

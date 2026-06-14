@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { CustomCursor } from "@/components/CustomCursor";
 import { BackToTop } from "@/components/BackToTop";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import { ToasterProvider } from "@/components/ToasterProvider";
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans antialiased">
         <ThemeProvider>
           <SmoothScroll />
+          <CustomCursor />
           <ScrollProgress />
           <Navbar />
           <main className="min-h-screen">{children}</main>

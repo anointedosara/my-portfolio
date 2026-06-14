@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
-import { ProjectCard } from "@/components/ProjectCard";
+import { FeaturedShowcase } from "@/components/FeaturedShowcase";
 import { SkillCard } from "@/components/SkillCard";
 import { StatCounter } from "@/components/StatCounter";
 import { Parallax } from "@/components/Parallax";
@@ -99,30 +99,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Featured projects */}
-      <section className="container section-pad">
-        <SectionHeading
-          eyebrow="Portfolio"
-          title={
-            <>
-              Featured <span className="gradient-text">Projects</span>
-            </>
-          }
-          subtitle="A selection of projects I've designed and built. Hover to view live demos and source code."
-        />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((project) => (
-            <Reveal key={project._id || project.title}>
-              <ProjectCard project={project} />
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Link href="/projects" className="btn-primary">
-            View all projects <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
+      {/* Featured projects — pinned horizontal showcase on desktop */}
+      <FeaturedShowcase projects={featured} />
 
       {/* CTA */}
       <section className="container pb-24">
