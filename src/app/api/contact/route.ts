@@ -30,7 +30,8 @@ export async function POST(req: NextRequest) {
     await MessageModel.create(parsed.data);
     await AnalyticsModel.create({ type: "contact_submit", label: parsed.data.email });
     return ok({ success: true, stored: true }, 201);
-  } catch {
+  } catch (err) {
+    console.error("CONTACT_ERROR:", err);
     return fail("Could not send your message right now. Please try again later.", 500);
   }
 }

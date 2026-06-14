@@ -1,4 +1,17 @@
+import dns from "node:dns";
 import mongoose from "mongoose";
+
+// Some local environments (notably Windows with certain VPN/router DNS configs)
+// refuse Node's SRV DNS lookups (`querySrv ECONNREFUSED`) even though the OS
+// resolves them fine. Point Node at public resolvers locally so mongodb+srv://
+// works. Skipped on Vercel, where the default DNS is correct.
+if (!process.env.VERCEL) {
+  try {
+    dns.setServers(["8.8.8.8", "1.1.1.1"]);
+  } catch {
+    // ignore — fall back to system DNS
+  }
+}
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
