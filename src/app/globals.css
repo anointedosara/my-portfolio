@@ -26,11 +26,13 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   body {
     background-color: rgb(var(--bg));
     color: rgb(var(--text));
     -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   ::selection {
