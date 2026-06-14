@@ -1,4 +1,11 @@
-import { Reveal } from "./Reveal";
+"use client";
+
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 interface Props {
   eyebrow?: string;
@@ -8,17 +15,47 @@ interface Props {
 }
 
 export function SectionHeading({ eyebrow, title, subtitle, center = true }: Props) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const items = ref.current?.querySelectorAll("[data-reveal]");
+      if (!items || !items.length) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      gsap.from(items, {
+        y: 42,
+        opacity: 0,
+        duration: 0.9,
+        ease: "power3.out",
+        stagger: 0.12,
+        scrollTrigger: { trigger: ref.current, start: "top 85%", once: true },
+      });
+    },
+    { scope: ref }
+  );
+
   return (
-    <Reveal className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <div ref={ref} className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
       {eyebrow && (
-        <span className="mb-3 inline-block rounded-full border border-[rgb(var(--border))] bg-soft px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-400">
+        <span
+          data-reveal
+          className="mb-3 inline-block rounded-full border border-[rgb(var(--border))] bg-soft px-4 py-1 text-xs font-semibold uppercase tracking-widest text-brand-400"
+        >
           {eyebrow}
         </span>
       )}
-      <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+      <h2
+        data-reveal
+        className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
+      >
         {title}
       </h2>
-      {subtitle && <p className="mt-4 text-base text-soft sm:text-lg">{subtitle}</p>}
-    </Reveal>
+      {subtitle && (
+        <p data-reveal className="mt-4 text-base text-soft sm:text-lg">
+          {subtitle}
+        </p>
+      )}
+    </div>
   );
 }

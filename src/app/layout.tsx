@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import { BackToTop } from "@/components/BackToTop";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import { ToasterProvider } from "@/components/ToasterProvider";
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${display.variable}`}>
       <body className="font-sans antialiased">
         <ThemeProvider>
+          <SmoothScroll />
           <ScrollProgress />
           <Navbar />
           <main className="min-h-screen">{children}</main>
