@@ -24,7 +24,7 @@ export function BackToTop() {
       className={`fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full text-white shadow-lg transition-all duration-300 ${
         show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
       }`}
-      style={{ backgroundImage: "linear-gradient(120deg, #cd5ff8, #6366f1)" }}
+      style={{ backgroundImage: "linear-gradient(120deg, #a78bfa, #818cf8)" }}
     >
       <ArrowUp className="h-5 w-5" />
     </button>

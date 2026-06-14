@@ -8,12 +8,12 @@ export function ToasterProvider() {
       position="bottom-right"
       toastOptions={{
         style: {
-          background: "rgb(18 18 32)",
-          color: "#f0f0f8",
-          border: "1px solid rgb(38 38 56)",
+          background: "rgb(28 30 43)",
+          color: "#dee1e9",
+          border: "1px solid rgb(44 47 64)",
           borderRadius: "12px",
         },
-        success: { iconTheme: { primary: "#cd5ff8", secondary: "#fff" } },
+        success: { iconTheme: { primary: "#a78bfa", secondary: "#fff" } },
       }}
     />
   );

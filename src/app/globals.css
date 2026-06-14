@@ -39,7 +39,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   ::selection {
-    background-color: rgba(205, 95, 248, 0.3);
+    background-color: rgba(167, 139, 250, 0.3);
   }
 }
 
@@ -61,19 +61,19 @@
     border: 1px solid rgb(var(--border));
   }
   .gradient-text {
-    background-image: linear-gradient(120deg, #cd5ff8, #8b5cf6, #6366f1);
+    background-image: linear-gradient(120deg, #a78bfa, #8b80f4, #818cf8);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold text-white transition-all duration-300;
-    background-image: linear-gradient(120deg, #cd5ff8, #8b5cf6);
-    box-shadow: 0 8px 30px -8px rgba(139, 92, 246, 0.6);
+    background-image: linear-gradient(120deg, #a78bfa, #8b80f4);
+    box-shadow: 0 8px 30px -8px rgba(139, 128, 244, 0.6);
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px -8px rgba(139, 92, 246, 0.8);
+    box-shadow: 0 12px 40px -8px rgba(139, 128, 244, 0.8);
   }
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition-all duration-300;
@@ -81,8 +81,8 @@
     background-color: rgb(var(--card));
   }
   .btn-ghost:hover {
-    border-color: #cd5ff8;
-    color: #cd5ff8;
+    border-color: #a78bfa;
+    color: #a78bfa;
   }
   .card {
     @apply rounded-2xl p-6 transition-all duration-300;
@@ -91,13 +91,13 @@
   }
   .card-hover:hover {
     transform: translateY(-6px);
-    border-color: rgba(205, 95, 248, 0.5);
-    box-shadow: 0 20px 50px -20px rgba(139, 92, 246, 0.4);
+    border-color: rgba(167, 139, 250, 0.5);
+    box-shadow: 0 20px 50px -20px rgba(139, 128, 244, 0.4);
   }
   .chip {
     @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
-    background-color: rgba(205, 95, 248, 0.12);
-    color: #b833ec;
+    background-color: rgba(167, 139, 250, 0.12);
+    color: #7c6ff0;
   }
   .dark .chip {
     color: #d8b4fe;
@@ -109,8 +109,8 @@
     color: rgb(var(--text));
   }
   .input-field:focus {
-    border-color: #cd5ff8;
-    box-shadow: 0 0 0 3px rgba(205, 95, 248, 0.15);
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
   }
   .section-pad {
     @apply py-20 md:py-28;
@@ -136,13 +136,13 @@
   opacity: 0.35;
 }
 .aurora::before {
-  background: #cd5ff8;
+  background: #a78bfa;
   top: -10rem;
   right: -8rem;
   animation: float 8s ease-in-out infinite;
 }
 .aurora::after {
-  background: #6366f1;
+  background: #818cf8;
   bottom: -12rem;
   left: -8rem;
   animation: float 10s ease-in-out infinite;
@@ -156,7 +156,7 @@
   background: rgb(var(--bg));
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#cd5ff8, #6366f1);
+  background: linear-gradient(#a78bfa, #818cf8);
   border-radius: 9999px;
 }
 
@@ -201,12 +201,12 @@ html.lenis body {
 .cursor-dot {
   width: 6px;
   height: 6px;
-  background: #cd5ff8;
+  background: #a78bfa;
 }
 .cursor-ring {
   width: 38px;
   height: 38px;
-  border: 1.5px solid rgba(205, 95, 248, 0.5);
+  border: 1.5px solid rgba(167, 139, 250, 0.5);
 }
 .has-custom-cursor,
 .has-custom-cursor * {
