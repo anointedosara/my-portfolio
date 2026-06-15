@@ -18,10 +18,10 @@ export async function getProjects(): Promise<Project[]> {
   try {
     await connectToDatabase();
     const docs = await ProjectModel.find().sort({ order: 1, createdAt: 1 }).lean();
-    if (!docs.length) return seedProjects;
+    if (!docs.length) return byOrder(seedProjects);
     return serialize<Project>(docs);
   } catch {
-    return seedProjects;
+    return byOrder(seedProjects);
   }
 }
 
@@ -36,10 +36,10 @@ export async function getSkills(): Promise<Skill[]> {
   try {
     await connectToDatabase();
     const docs = await SkillModel.find().sort({ order: 1 }).lean();
-    if (!docs.length) return seedSkills;
+    if (!docs.length) return byOrder(seedSkills);
     return serialize<Skill>(docs);
   } catch {
-    return seedSkills;
+    return byOrder(seedSkills);
   }
 }
 
@@ -48,9 +48,9 @@ export async function getExperience(): Promise<Experience[]> {
   try {
     await connectToDatabase();
     const docs = await ExperienceModel.find().sort({ order: 1 }).lean();
-    if (!docs.length) return seedExperience;
+    if (!docs.length) return byOrder(seedExperience);
     return serialize<Experience>(docs);
   } catch {
-    return seedExperience;
+    return byOrder(seedExperience);
   }
 }

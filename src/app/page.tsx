@@ -5,6 +5,7 @@ import { Marquee } from "@/components/Marquee";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { FeaturedShowcase } from "@/components/FeaturedShowcase";
+import { ValueProps } from "@/components/ValueProps";
 import { SkillCard } from "@/components/SkillCard";
 import { StatCounter } from "@/components/StatCounter";
 import { Parallax } from "@/components/Parallax";
@@ -22,8 +23,11 @@ export default async function HomePage() {
       <Hero />
       <Marquee />
 
+      {/* The 3 questions, answered instantly */}
+      <ValueProps />
+
       {/* Stats */}
-      <section className="container -mt-2 pt-16">
+      <section className="container pt-12">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {profile.stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08}>
