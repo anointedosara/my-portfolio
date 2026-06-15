@@ -41,7 +41,7 @@ export const profile = {
   },
   stats: [
     { label: "Projects Built", value: "20+" },
-    { label: "Years Coding", value: "4+" },
+    { label: "Years Coding", value: "3+" },
     { label: "Technologies", value: "12+" },
     { label: "Happy Clients", value: "5+" },
   ],

@@ -143,7 +143,7 @@ export function Hero() {
 
           <div className="hero-badge absolute -left-4 top-10 glass rounded-2xl px-4 py-3 shadow-xl">
             <p className="text-xs font-medium text-soft">Experience</p>
-            <p className="font-display text-lg font-bold">4+ Years</p>
+            <p className="font-display text-lg font-bold">3+ Years</p>
           </div>
           <div className="hero-badge absolute -right-4 bottom-12 glass rounded-2xl px-4 py-3 shadow-xl">
             <p className="text-xs font-medium text-soft">Projects</p>
