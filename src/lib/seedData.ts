@@ -17,7 +17,7 @@ export const profile = {
   ],
   location: "Nigeria",
   tagline:
-    "An AI-first frontend engineer who builds full-stack web apps — storefronts, dashboards & booking platforms — with React, Next.js & MongoDB.",
+    "An AI-first frontend engineer building modern, scalable and highly responsive web apps with React and Next.js.",
   bio: [
     "I'm an AI-first Software Engineer (Frontend Developer) based in Nigeria with 3+ years building scalable, responsive web apps in React and Next.js. I've shipped 20+ projects and lean on AI tools to ship faster and solve problems — seeking a fast-growing startup where I can contribute and grow.",
     "I turn Figma designs into clean, reusable components backed by consistent design systems, and I care about performance, SEO and accessibility — using techniques like server-side rendering (SSR) and dynamic routing in Next.js.",
