@@ -10,16 +10,16 @@ export const profile = {
   firstName: "Anointed",
   role: "Software Engineer (Frontend Developer)",
   roles: [
-    "Software Engineer",
+    "AI-First Software Engineer",
     "Frontend Developer",
     "React & Next.js Engineer",
     "Responsive UI Builder",
   ],
   location: "Nigeria",
   tagline:
-    "I build modern, scalable, interactive and highly responsive web applications with React and Next.js.",
+    "An AI-first frontend engineer building modern, scalable and highly responsive web apps with React and Next.js.",
   bio: [
-    "I'm a Software Engineer (Frontend Developer) based in Nigeria, looking to join a fast-growing startup. I bring sound knowledge and experience building modern, scalable, interactive and highly responsive web applications with React and Next.js.",
+    "I'm an AI-first Software Engineer (Frontend Developer) based in Nigeria with 3+ years building scalable, responsive web apps in React and Next.js. I've shipped 20+ projects and lean on AI tools to ship faster and solve problems — seeking a fast-growing startup where I can contribute and grow.",
     "I turn Figma designs into clean, reusable components backed by consistent design systems, and I care about performance, SEO and accessibility — using techniques like server-side rendering (SSR) and dynamic routing in Next.js.",
     "I'm a graduate of the University of Benin (B.Sc. Geomatics, 2020–2025), and I'm always seeking challenging opportunities where I can grow while helping achieve organizational goals.",
   ],
