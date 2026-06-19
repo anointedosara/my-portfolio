@@ -139,7 +139,7 @@ export default function AdminDashboard() {
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {contentCards.map(({ label, value, icon: Icon }) => (
           <div key={label} className="card flex items-center gap-4 !py-4">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-indigo-500/15 text-indigo-400">
+            <span className="grid h-10 w-10 place-items-center rounded-xl bg-blue-600/15 text-blue-500">
               <Icon className="h-5 w-5" />
             </span>
             <div>

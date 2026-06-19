@@ -45,8 +45,8 @@ export function CustomCursor() {
       );
       gsap.to(ring, {
         scale: t ? 1.8 : 1,
-        backgroundColor: t ? "rgba(167,139,250,0.15)" : "rgba(167,139,250,0)",
-        borderColor: t ? "rgba(167,139,250,0.9)" : "rgba(167,139,250,0.5)",
+        backgroundColor: t ? "rgba(56,189,248,0.15)" : "rgba(56,189,248,0)",
+        borderColor: t ? "rgba(56,189,248,0.9)" : "rgba(56,189,248,0.5)",
         duration: 0.3,
       });
     };

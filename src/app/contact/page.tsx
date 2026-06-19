@@ -42,7 +42,7 @@ export default function ContactPage() {
               {details.map(({ icon: Icon, label, value, href }) => {
                 const inner = (
                   <div className="card card-hover flex items-center gap-4">
-                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-400/15 to-indigo-500/15 text-brand-400">
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-400/15 to-blue-600/15 text-brand-400">
                       <Icon className="h-5 w-5" />
                     </span>
                     <div className="min-w-0">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="card bg-gradient-to-br from-brand-400/10 to-indigo-500/10">
+              <div className="card bg-gradient-to-br from-brand-400/10 to-blue-600/10">
                 <p className="font-display font-semibold">Currently available 🟢</p>
                 <p className="mt-1 text-sm text-soft">
                   Open to freelance projects, full-time roles and collaborations.

@@ -1,34 +1,40 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export function StatCounter({ value, label }: { value: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-40px" });
-  const [display, setDisplay] = useState("0");
+  const match = value.match(/(\d+)(.*)/);
+  const target = match ? parseInt(match[1], 10) : null;
+  const suffix = match ? match[2] || "" : "";
+  const [display, setDisplay] = useState(target === null ? value : `0${suffix}`);
 
-  useEffect(() => {
-    if (!inView) return;
-    const match = value.match(/(\d+)(.*)/);
-    if (!match) {
-      setDisplay(value);
-      return;
-    }
-    const target = parseInt(match[1], 10);
-    const suffix = match[2] || "";
-    let current = 0;
-    const step = Math.max(1, Math.floor(target / 30));
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
+  useGSAP(
+    () => {
+      const el = ref.current;
+      if (!el || target === null) return;
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        setDisplay(`${target}${suffix}`);
+        return;
       }
-      setDisplay(`${current}${suffix}`);
-    }, 35);
-    return () => clearInterval(timer);
-  }, [inView, value]);
+
+      const counter = { val: 0 };
+      gsap.to(counter, {
+        val: target,
+        duration: 1.2,
+        ease: "power2.out",
+        onUpdate: () => setDisplay(`${Math.round(counter.val)}${suffix}`),
+        scrollTrigger: { trigger: el, start: "top 92%", once: true },
+      });
+    },
+    { scope: ref, dependencies: [target, suffix] }
+  );
 
   return (
     <div ref={ref} className="card text-center">

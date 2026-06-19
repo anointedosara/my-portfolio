@@ -71,7 +71,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
                   onClick={() => setOpen(false)}
                   className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
                     active
-                      ? "bg-gradient-to-r from-brand-400 to-indigo-500 text-white shadow-lg"
+                      ? "bg-gradient-to-r from-brand-400 to-blue-600 text-white shadow-lg"
                       : "text-soft hover:bg-[rgb(var(--card))] hover:text-brand-400"
                   }`}
                 >

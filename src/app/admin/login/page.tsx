@@ -38,7 +38,7 @@ function LoginForm() {
       <div className="aurora" />
       <div className="relative z-10 w-full max-w-md">
         <div className="mb-6 text-center">
-          <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-400 to-indigo-500 text-white">
+          <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-brand-400 to-blue-600 text-white">
             <ShieldCheck className="h-7 w-7" />
           </span>
           <h1 className="mt-4 font-display text-2xl font-bold">Admin Login</h1>

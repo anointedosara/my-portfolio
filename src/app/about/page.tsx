@@ -37,7 +37,7 @@ export default async function AboutPage() {
         <div className="mt-14 grid items-start gap-12 lg:grid-cols-2">
           <Reveal x={-30} y={0}>
             <div className="relative mx-auto max-w-md">
-              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-400/25 to-indigo-500/25 blur-xl" />
+              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-400/25 to-blue-600/25 blur-xl" />
               <Parallax amount={30}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img

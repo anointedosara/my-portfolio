@@ -36,7 +36,7 @@ export function ValueProps() {
         {items.map((item, i) => (
           <Reveal key={item.question} delay={i * 0.1} className="h-full">
             <div className="card card-hover flex h-full flex-col">
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-brand-400/15 to-indigo-500/15 text-brand-400">
+              <span className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-brand-400/15 to-blue-600/15 text-brand-400">
                 <item.icon className="h-6 w-6" />
               </span>
               <p className="mt-5 text-xs font-semibold uppercase tracking-widest text-brand-400">

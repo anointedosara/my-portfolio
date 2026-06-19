@@ -38,7 +38,7 @@ export function Navbar() {
     >
       <nav className="container flex h-16 items-center justify-between md:h-20">
         <Link href="/" className="flex items-center gap-2 font-display text-lg font-bold">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-indigo-500 text-white">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-blue-600 text-white">
             <Code2 className="h-5 w-5" />
           </span>
           <span>
@@ -59,7 +59,7 @@ export function Navbar() {
                 >
                   {link.label}
                   {active && (
-                    <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-brand-400 to-indigo-500" />
+                    <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-gradient-to-r from-brand-400 to-blue-600" />
                   )}
                 </Link>
               </li>

@@ -1,19 +1,44 @@
 "use client";
 
-import { motion, useScroll, useSpring } from "framer-motion";
+import { useRef } from "react";
 import { usePathname } from "next/navigation";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export function ScrollProgress() {
   const pathname = usePathname();
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 25, restDelta: 0.001 });
+  const ref = useRef<HTMLDivElement>(null);
+  const isAdmin = pathname?.startsWith("/admin");
 
-  if (pathname?.startsWith("/admin")) return null;
+  useGSAP(
+    () => {
+      const el = ref.current;
+      if (!el || isAdmin) return;
+
+      gsap.set(el, { scaleX: 0, transformOrigin: "left center" });
+      gsap.to(el, {
+        scaleX: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: document.documentElement,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 0.3,
+        },
+      });
+    },
+    { dependencies: [isAdmin] }
+  );
+
+  if (isAdmin) return null;
 
   return (
-    <motion.div
-      style={{ scaleX }}
-      className="fixed inset-x-0 top-0 z-[60] h-1 origin-left bg-gradient-to-r from-brand-400 via-purple-500 to-indigo-500"
+    <div
+      ref={ref}
+      className="fixed inset-x-0 top-0 z-[60] h-1 origin-left bg-gradient-to-r from-brand-400 via-blue-500 to-blue-600"
     />
   );
 }

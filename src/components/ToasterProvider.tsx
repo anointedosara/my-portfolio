@@ -13,7 +13,7 @@ export function ToasterProvider() {
           border: "1px solid rgb(44 47 64)",
           borderRadius: "12px",
         },
-        success: { iconTheme: { primary: "#a78bfa", secondary: "#fff" } },
+        success: { iconTheme: { primary: "#38bdf8", secondary: "#fff" } },
       }}
     />
   );

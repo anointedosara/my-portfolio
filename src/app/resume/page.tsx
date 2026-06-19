@@ -51,7 +51,7 @@ export default async function ResumePage() {
         <div className="mt-20">
           <Reveal>
             <h3 className="mb-10 flex items-center justify-center gap-3 font-display text-2xl font-bold">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-indigo-500/15 text-indigo-400">
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-blue-600/15 text-blue-500">
                 <GraduationCap className="h-5 w-5" />
               </span>
               Education & Certifications

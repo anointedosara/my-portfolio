@@ -42,7 +42,7 @@ export default async function HomePage() {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <Reveal x={-30} y={0}>
             <div className="relative mx-auto max-w-sm">
-              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-400/20 to-indigo-500/20 blur-xl" />
+              <div className="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-400/20 to-blue-600/20 blur-xl" />
               <Parallax amount={28}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -109,7 +109,7 @@ export default async function HomePage() {
       {/* CTA */}
       <section className="container pb-24">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-[rgb(var(--border))] bg-gradient-to-br from-brand-400/10 via-transparent to-indigo-500/10 px-6 py-14 text-center md:py-20">
+          <div className="relative overflow-hidden rounded-3xl border border-[rgb(var(--border))] bg-gradient-to-br from-brand-400/10 via-transparent to-blue-600/10 px-6 py-14 text-center md:py-20">
             <div className="aurora opacity-60" />
             <div className="relative z-10 mx-auto max-w-2xl">
               <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">

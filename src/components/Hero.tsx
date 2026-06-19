@@ -125,7 +125,7 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-sm">
-          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand-400/30 to-indigo-500/30 blur-2xl" />
+          <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand-400/30 to-blue-600/30 blur-2xl" />
           <div className="hero-img-wrap relative overflow-hidden rounded-[2rem] border border-[rgb(var(--border))] bg-soft p-2 shadow-2xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
