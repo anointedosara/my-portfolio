@@ -94,11 +94,12 @@ export function Navbar() {
   if (pathname?.startsWith("/admin")) return null;
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass shadow-lg shadow-black/5" : "bg-transparent"
-      }`}
-    >
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+          scrolled ? "glass shadow-lg shadow-black/5" : "bg-transparent"
+        }`}
+      >
       <nav className="container flex h-16 items-center justify-between md:h-20">
         <Link href="/" className="flex items-center gap-2 font-display text-lg font-bold">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-blue-600 text-white">
@@ -145,9 +146,11 @@ export function Navbar() {
             <Menu className="h-5 w-5" />
           </button>
         </div>
-      </nav>
+        </nav>
+      </header>
 
-      {/* Full-screen mobile overlay */}
+      {/* Full-screen mobile overlay — sibling of <header> so its fixed
+          positioning is relative to the viewport, not the glass header. */}
       <div
         ref={overlayRef}
         style={{ visibility: "hidden", opacity: 0 }}
@@ -201,6 +204,6 @@ export function Navbar() {
           </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
