@@ -62,14 +62,26 @@ export function Navbar() {
   );
 
   // Drive the timeline from React state, and lock background scroll while open.
+  const firstRun = useRef(true);
   useEffect(() => {
+    // Skip the initial render: calling reverse() on a timeline at time 0 would
+    // jump it to the end and flash the menu open. Only react to real toggles.
+    if (firstRun.current) {
+      firstRun.current = false;
+      return;
+    }
     const t = tl.current;
     if (t) (open ? t.play() : t.reverse());
     document.documentElement.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.documentElement.style.overflow = "";
-    };
   }, [open]);
+
+  // Reset the scroll lock if the nav unmounts while open.
+  useEffect(
+    () => () => {
+      document.documentElement.style.overflow = "";
+    },
+    []
+  );
 
   // Close on Escape.
   useEffect(() => {
