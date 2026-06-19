@@ -1,10 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Code2 } from "lucide-react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ThemeToggle } from "./ThemeToggle";
+
+gsap.registerPlugin(useGSAP);
 
 const links = [
   { href: "/", label: "Home" },
@@ -18,6 +22,8 @@ export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const tl = useRef<gsap.core.Timeline | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -27,6 +33,51 @@ export function Navbar() {
   }, []);
 
   useEffect(() => setOpen(false), [pathname]);
+
+  // Build the open/close timeline once; play forward to open, reverse to close.
+  useGSAP(
+    () => {
+      const overlay = overlayRef.current;
+      if (!overlay) return;
+      const items = overlay.querySelectorAll(".mobile-link");
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      gsap.set(overlay, { autoAlpha: 0 });
+      tl.current = gsap
+        .timeline({ paused: true })
+        .to(overlay, { autoAlpha: 1, duration: reduce ? 0 : 0.35, ease: "power2.out" })
+        .from(
+          items,
+          {
+            yPercent: 60,
+            opacity: 0,
+            duration: reduce ? 0 : 0.5,
+            stagger: reduce ? 0 : 0.07,
+            ease: "power3.out",
+          },
+          reduce ? 0 : "-=0.15"
+        );
+    },
+    { scope: overlayRef }
+  );
+
+  // Drive the timeline from React state, and lock background scroll while open.
+  useEffect(() => {
+    const t = tl.current;
+    if (t) (open ? t.play() : t.reverse());
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.documentElement.style.overflow = "";
+    };
+  }, [open]);
+
+  // Close on Escape.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
 
   if (pathname?.startsWith("/admin")) return null;
 
@@ -74,42 +125,69 @@ export function Navbar() {
           <ThemeToggle />
           <button
             type="button"
-            aria-label="Toggle menu"
-            onClick={() => setOpen((v) => !v)}
+            aria-label="Open menu"
+            aria-expanded={open}
+            onClick={() => setOpen(true)}
             className="grid h-10 w-10 place-items-center rounded-full surface md:hidden"
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            <Menu className="h-5 w-5" />
           </button>
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Full-screen mobile overlay */}
       <div
-        className={`overflow-hidden border-t border-[rgb(var(--border))] glass transition-all duration-300 md:hidden ${
-          open ? "max-h-96" : "max-h-0 border-t-0"
-        }`}
+        ref={overlayRef}
+        style={{ visibility: "hidden", opacity: 0 }}
+        className="fixed inset-0 z-[60] flex flex-col bg-[rgb(var(--bg))] md:hidden"
       >
-        <ul className="container flex flex-col gap-1 py-4">
-          {links.map((link) => (
-            <li key={link.href}>
+        <div className="container flex h-16 items-center justify-between">
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-2 font-display text-lg font-bold"
+          >
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-400 to-blue-600 text-white">
+              <Code2 className="h-5 w-5" />
+            </span>
+            <span>
+              Anointed<span className="gradient-text">.</span>
+            </span>
+          </Link>
+          <button
+            type="button"
+            aria-label="Close menu"
+            onClick={() => setOpen(false)}
+            className="grid h-10 w-10 place-items-center rounded-full surface"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        <nav className="container flex flex-1 flex-col justify-center gap-2 pb-16">
+          {links.map((link) => {
+            const active = pathname === link.href;
+            return (
               <Link
+                key={link.href}
                 href={link.href}
-                className={`block rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
-                  pathname === link.href
-                    ? "bg-soft text-brand-400"
-                    : "text-soft hover:bg-soft"
+                onClick={() => setOpen(false)}
+                className={`mobile-link font-display text-3xl font-bold tracking-tight transition-colors ${
+                  active ? "gradient-text" : "text-soft hover:text-brand-400"
                 }`}
               >
                 {link.label}
               </Link>
-            </li>
-          ))}
-          <li>
-            <Link href="/contact" className="btn-primary mt-2 w-full">
-              Hire Me
-            </Link>
-          </li>
-        </ul>
+            );
+          })}
+          <Link
+            href="/contact"
+            onClick={() => setOpen(false)}
+            className="mobile-link btn-primary mt-8 w-fit"
+          >
+            Hire Me
+          </Link>
+        </nav>
       </div>
     </header>
   );
